@@ -7,7 +7,7 @@
   "scripts": {
     "test:all:headless": "playwright test",
     "test:all": "playwright test --headed",
-    "test:chrome": "playwright test --project chrome"
+    "test:chrome": "playwright test --project chrome --headed"
   },
   "keywords": [],
   "author": "",
