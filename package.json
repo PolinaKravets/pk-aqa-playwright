@@ -5,6 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test:all:headless": "playwright test",
     "test:all": "playwright test --headed",
     "test:chrome": "playwright test --project chrome --headed"
@@ -13,6 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint-plugin-playwright": "^2.1.0",
+    "@eslint/js": "^9.15.0",
+    "@stylistic/eslint-plugin-js": "^2.11.0",
+    "eslint": "^9.15.0"
+  },
+  "dependencies": {
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.9.3"
   }

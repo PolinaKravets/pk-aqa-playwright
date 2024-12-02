@@ -1,24 +1,25 @@
 
-class AuthData {
-    constructor(page, context, baseUrl = 'https://qauto.forstudy.space') {
-        this.page = page;
-        this.context = context;
-        this.baseUrl = baseUrl;
-    }
+class AuthPage {
 
-    get url() {
-        return this.baseUrl;
-    }
+  /**
+   * @param {import('@playwright/test').Page} page
+   * @param {import('@playwright/test').Context} context
+   */
+  
+  constructor(page) {
+    this.page = page;
+        
+  }
 
-    async navigateToMainPageWithAuth(credentials = { username: "guest", password: "welcome2qauto" }) {
-        // Используем встроенную аутентификацию Playwright
-        const context = await this.page.context();
-        await context.setExtraHTTPHeaders({
-            Authorization: 'Basic ' + Buffer.from(`${credentials.username}:${credentials.password}`).toString('base64'),
-        });
+  async navigateToMainPageWithAuth(credentials = { username: "guest", password: "welcome2qauto" }) {
+    // Используем встроенную аутентификацию Playwright
+    //const context = await this.page.context();
+    await this.page.context().setExtraHTTPHeaders({
+      Authorization: 'Basic ' + Buffer.from(`${credentials.username}:${credentials.password}`).toString('base64'),
+    });
 
-        await this.page.goto(this.url);
-    }
+    await this.page.goto('/');
+  }
 }
 
-export default AuthData;
+export default AuthPage;
