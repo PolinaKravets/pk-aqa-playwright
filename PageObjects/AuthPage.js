@@ -5,7 +5,7 @@ class AuthPage {
    * @param {import('@playwright/test').Page} page
    * @param {import('@playwright/test').Context} context
    */
-  
+
   constructor(page) {
     this.page = page;
         
