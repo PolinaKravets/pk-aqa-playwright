@@ -9,19 +9,23 @@
     "lint:fix": "eslint --fix",
     "test:all:headless": "playwright test",
     "test:all": "playwright test --headed",
-    "test:chrome": "playwright test --project chrome --headed"
+    "test:chrome": "source .env && playwright test --project chrome --headed",
+    "test:stage:chrome": "cp './env-files/.env.stage' '.env' && source .env && playwright test --project chrome --headed",
+    "test:test:chrome": "cp './env-files/.env.test' '.env' && source .env && playwright test --project chrome --headed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint-plugin-playwright": "^2.1.0",
     "@eslint/js": "^9.15.0",
     "@stylistic/eslint-plugin-js": "^2.11.0",
-    "eslint": "^9.15.0"
+    "@testomatio/reporter": "^1.6.5",
+    "eslint": "^9.15.0",
+    "eslint-plugin-playwright": "^2.1.0"
   },
   "dependencies": {
     "@playwright/test": "^1.49.0",
-    "@types/node": "^22.9.3"
+    "@types/node": "^22.9.3",
+    "dotenv": "^16.4.6"
   }
 }

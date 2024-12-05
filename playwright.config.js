@@ -1,5 +1,6 @@
 // @ts-check
 import  { defineConfig, devices } from '@playwright/test';
+import 'dotenv/config';
 
 /**
  * Read environment variables from file.
@@ -21,11 +22,21 @@ export default  defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : '30%',
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  
+  reporter: [
+    ['list'],
+    [
+      '@testomatio/reporter/lib/adapter/playwright.js',
+      {
+        apiKey: process.env.TESTOMATIO,
+      },
+    ],
+  ],
+    
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://qauto.forstudy.space',
+    baseURL: process.env.BASE_URL,
     actionTimeout: 5000,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
