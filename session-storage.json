@@ -1,0 +1,73 @@
+{
+  "cookies": [
+    {
+      "name": "YSC",
+      "value": "oa9spbnw_Wo",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "VISITOR_INFO1_LIVE",
+      "value": "-HWCBAGx1BM",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1749412596.203525,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "VISITOR_PRIVACY_METADATA",
+      "value": "CgJVQRIEGgAgNA%3D%3D",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1749412596.20392,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID",
+      "value": "519=gjQuXnVau5CByvzCKaPwMrGkD7VeI8dUl3UWNNYIN8B4wFq4VyO_w37YgaHud3NIiDFA1jFlCdjkuZzj9WKpiCWhlbwK6-zw9T-KjaH66qO77lwYdkIVwyNcNgigtpMRILTOWpd6l1ymwnw3yigaBkykqt8VQm3q6cCPCP4vcgjBay7ry2A",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1749671797.103877,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "s%3AY0hSoWfE5bp8G-Z1hVt1z9IiInLg_Uaw.dn9yQNLrkyRcuGBaW5iWjj0PVOdCjZJ67%2BKM0t77Cm0",
+      "domain": ".forstudy.space",
+      "path": "/",
+      "expires": 1733946997.427565,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.youtube.com",
+      "localStorage": [
+        {
+          "name": "yt.innertube::nextId",
+          "value": "{\"data\":2,\"expiration\":1733946996348,\"creation\":1733860596348}"
+        },
+        {
+          "name": "yt.innertube::requests",
+          "value": "{\"data\":{},\"expiration\":1733946996487,\"creation\":1733860596487}"
+        },
+        {
+          "name": "ytidb::LAST_RESULT_ENTRY_KEY",
+          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1736452596560,\"creation\":1733860596560}"
+        }
+      ]
+    }
+  ]
+}

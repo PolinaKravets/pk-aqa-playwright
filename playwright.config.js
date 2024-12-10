@@ -39,7 +39,7 @@ export default  defineConfig({
     baseURL: process.env.BASE_URL,
     actionTimeout: 5000,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on-first-retry'
   },
 
   /* Configure projects for major browsers */
@@ -74,9 +74,20 @@ export default  defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
+    { name: 'setup', testMatch: '*.setup.js' },
+    {
+      name: 'chrome-auth',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' ,
+        storageState: 'session-storage.json'
+      },
+      dependencies: ['setup'],
+    },
     {
       name: 'chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' ,
+    
+      },
+      
     },
   ],
 
