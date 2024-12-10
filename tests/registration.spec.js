@@ -11,7 +11,7 @@ function generateEmail(prefix = 'aqa') {
   return `${prefix}-${timestamp}@test.com`;
 }
 
-test.describe('Registration validation tests', () => {
+test.describe('Registration validation tests', { tag: '@no-auth' }, () => {
   test.beforeEach(async({ page, browser }) => {
 
     const context = await browser.newContext();
@@ -26,7 +26,7 @@ test.describe('Registration validation tests', () => {
     
     
 
-  test('Success registration', async() => {
+  test('Success registration', { tag: '@no-auth' }, async() => {
 
     const email = generateEmail();
     await regPage.openRegPopup();
@@ -37,7 +37,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.page).toHaveURL(`/panel/garage`);
   })
 
-  test('Validation empty Name field', async() => {
+  test('Validation empty Name field', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -46,7 +46,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpNameValidation).toContainText('Name required');
         
   })
-  test('Validation empty Last Name field', async() => {
+  test('Validation empty Last Name field', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -55,7 +55,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpLastNameValidation).toContainText('Last name required');
         
   })
-  test('Validation empty Email field', async() => {
+  test('Validation empty Email field', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -64,7 +64,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpEmailValidation).toContainText('Email required');
         
   })
-  test('Validation empty Password field', async() => {
+  test('Validation empty Password field', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -73,7 +73,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpPasswordValidation).toContainText('Password required');
         
   })
-  test('Validation empty  rep Password field', async() => {
+  test('Validation empty  rep Password field',{ tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -83,7 +83,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpRepPasswordValidation).toContainText('Re-enter password required');
         
   })
-  test('Validation  Name field length', async() => {
+  test('Validation  Name field length', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -91,7 +91,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
     await expect(regPage.selectors.signUpNameValidation).toContainText('Name has to be from 2 to 20 characters long');
   })
-  test('Validation  Last Name field length', async() => {
+  test('Validation  Last Name field length', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -99,7 +99,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
     await expect(regPage.selectors.signUpLastNameValidation).toContainText('Last name has to be from 2 to 20 characters long');
   })
-  test('Validation  Password field length', async() => {
+  test('Validation  Password field length', { tag: '@no-auth' }, async() => {
         
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -108,7 +108,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpPasswordValidation).toContainText('Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter');
     
   })
-  test('Validation  repeated Password field', async() => {
+  test('Validation  repeated Password field', { tag: '@no-auth' }, async() => {
     
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -118,7 +118,7 @@ test.describe('Registration validation tests', () => {
     await expect(regPage.selectors.signUpRepPasswordValidation).toContainText('Passwords do not match');
     
   })
-  test('Validation  invalid data', async() => {
+  test('Validation  invalid data', { tag: '@no-auth' }, async() => {
     
     await regPage.openRegPopup();
     await expect(regPage.selectors.signUpRegisterButton).toBeDisabled();
@@ -133,7 +133,7 @@ test.describe('Registration validation tests', () => {
     
   })
 
-  test('Registration with used email', async() => {
+  test('Registration with used email', { tag: '@no-auth' }, async() => {
 
     const email = generateEmail();
     await regPage.openRegPopup();

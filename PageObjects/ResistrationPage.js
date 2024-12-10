@@ -36,11 +36,11 @@ export default class RegisterPage extends AuthPage {
     await this.selectors.signUpButton.click();
   }
   async enterRegData(name,lastname,email, password,reppassword){
-    await this.selectors.signUpNameField.type(name);
-    await this.selectors.signUpLastNameField.type(lastname);
-    await this.selectors.signUpEmailField.type(email);
-    await this.selectors.signUpPasswordField.type(password);
-    await this.selectors.signUpRepPasswordField.type(reppassword);
+    await this.selectors.signUpNameField.fill(name);
+    await this.selectors.signUpLastNameField.fill(lastname);
+    await this.selectors.signUpEmailField.fill(email);
+    await this.selectors.signUpPasswordField.fill(password);
+    await this.selectors.signUpRepPasswordField.fill(reppassword);
         
   }
     
