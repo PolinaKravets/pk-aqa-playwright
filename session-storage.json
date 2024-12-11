@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "YSC",
-      "value": "oa9spbnw_Wo",
+      "value": "kbRQbIpY0EE",
       "domain": ".youtube.com",
       "path": "/",
       "expires": -1,
@@ -12,40 +12,40 @@
     },
     {
       "name": "VISITOR_INFO1_LIVE",
-      "value": "-HWCBAGx1BM",
+      "value": "tWN53lcuTh0",
       "domain": ".youtube.com",
       "path": "/",
-      "expires": 1749412596.203525,
+      "expires": 1749412807.971418,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "VISITOR_PRIVACY_METADATA",
-      "value": "CgJVQRIEGgAgNA%3D%3D",
+      "value": "CgJVQRIEGgAgOA%3D%3D",
       "domain": ".youtube.com",
       "path": "/",
-      "expires": 1749412596.20392,
+      "expires": 1749412807.972176,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "NID",
-      "value": "519=gjQuXnVau5CByvzCKaPwMrGkD7VeI8dUl3UWNNYIN8B4wFq4VyO_w37YgaHud3NIiDFA1jFlCdjkuZzj9WKpiCWhlbwK6-zw9T-KjaH66qO77lwYdkIVwyNcNgigtpMRILTOWpd6l1ymwnw3yigaBkykqt8VQm3q6cCPCP4vcgjBay7ry2A",
+      "value": "520=pj5fUuwxW9p-jFvtA1U4O2wt2hzPhyRVAlUCC_BAnbg31IwPDp3bi8DbA7xt3248sezUCBQ_DNbQH1xliSeDutKdhaVNX5pUKX_UFGetWf0VoPi1yktZoaRvuUI8t7yLcsI6pitgXmkAwOQoXNYubEy2PL5-ieZDr-_89xS0u9VtYZotH2A",
       "domain": ".google.com",
       "path": "/",
-      "expires": 1749671797.103877,
+      "expires": 1749672008.628675,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "sid",
-      "value": "s%3AY0hSoWfE5bp8G-Z1hVt1z9IiInLg_Uaw.dn9yQNLrkyRcuGBaW5iWjj0PVOdCjZJ67%2BKM0t77Cm0",
+      "value": "s%3AAtI6q2ZLqyqYIQx4yZLeRKwloOFxSEZc.bhNMUY3KS5%2BMeB%2BkDY3hV8rYz%2B4MNNK4GRmZwTfWeCc",
       "domain": ".forstudy.space",
       "path": "/",
-      "expires": 1733946997.427565,
+      "expires": 1733947208.948161,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -57,15 +57,15 @@
       "localStorage": [
         {
           "name": "yt.innertube::nextId",
-          "value": "{\"data\":2,\"expiration\":1733946996348,\"creation\":1733860596348}"
+          "value": "{\"data\":2,\"expiration\":1733947208114,\"creation\":1733860808114}"
         },
         {
           "name": "yt.innertube::requests",
-          "value": "{\"data\":{},\"expiration\":1733946996487,\"creation\":1733860596487}"
+          "value": "{\"data\":{},\"expiration\":1733947208226,\"creation\":1733860808226}"
         },
         {
           "name": "ytidb::LAST_RESULT_ENTRY_KEY",
-          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1736452596560,\"creation\":1733860596560}"
+          "value": "{\"data\":{\"hasSucceededOnce\":true},\"expiration\":1736452808305,\"creation\":1733860808305}"
         }
       ]
     }
