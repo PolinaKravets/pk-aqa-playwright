@@ -35,7 +35,7 @@ jobs:
         run: npm ci
       - name: Run api tests
         working-directory: .
-        run: npm run test:chrome:api
+        run: npm run test:chromium:api
 
   tests-playwright-e2e:
     name: "Playwright E2E Tests"
@@ -53,7 +53,7 @@ jobs:
         run: npm ci
       - name: Run e2e tests
         working-directory: .
-        run: npm run test:chrome:auth
+        run: npm run test:chromium:auth
       - uses: actions/upload-artifact@v3
         if: always()
         with:
