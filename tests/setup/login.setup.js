@@ -16,6 +16,8 @@ setup('Login to app', async({ browser }) => {
   
 
   await authPage.navigateToMainPageWithAuth();
+
+  await page.locator('button.btn.btn-primary').waitFor({ state: 'visible' });
   
   await logPage.selectors.signInButton.click();
   await logPage.loginUser(email, pwd);
