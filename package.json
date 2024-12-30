@@ -14,9 +14,9 @@
     "test:chrome:api": "source .env && playwright test --grep '@api' --project  chrome-auth --headed",
     "test:stage:chrome": "cp './env-files/.env.stage' '.env' && source .env && playwright test --project chrome --headed",
     "test:test:chrome": "cp './env-files/.env.test' '.env' && source .env && playwright test --project chrome --headed",
-    "test:chromium": ". .env && playwright test --grep '@no-auth' --project  chromium",
-    "test:chromium:api": ". .env && playwright test --grep '@api' --project  chromium-auth",
-    "test:chromium:auth": ". .env && playwright test --grep '@auth' --project  chromium-auth"
+    "test:chromium": "playwright test --grep '@no-auth' --project  chromium",
+    "test:chromium:api": "playwright test --grep '@api' --project  chromium-auth",
+    "test:chromium:auth": "playwright test --grep '@auth' --project  chromium-auth"
 
 
   },
