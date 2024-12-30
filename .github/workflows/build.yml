@@ -57,8 +57,8 @@ jobs:
         run: npm ci
       - name: Create .env file
         run: |
-        echo "USER_EMAIL=zarechpolina+hlaqa@gmail.com" > .env
-        echo "USER_PASSWORD=Qwerty123" > .env  
+          echo "USER_EMAIL=zarechpolina+hlaqa@gmail.com" > .env
+          echo "USER_PASSWORD=Qwerty123" >> .env
       - name: Run e2e tests auth
         working-directory: .
         run: npm run test:chromium:auth
